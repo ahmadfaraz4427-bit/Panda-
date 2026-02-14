@@ -3,33 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Valentine's Day</title>
+    <title>Happy Valentine's Day!</title>
     <style>
         body {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: pink;
-            overflow: hidden;
-            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            text-align: center;
         }
         .heart {
+            width: 100px;
+            height: 100px;
+            background-color: red;
             position: relative;
-            width: 100px;
-            height: 100px;
-            background-color: red;
+            margin: 50px auto;
             transform: rotate(-45deg);
-            animation: heartbeat 1s infinite;
+            animation: beat 1s infinite;
         }
-        .heart::before,
-        .heart::after {
-            content: "";
-            position: absolute;
-            border-radius: 50%;
+        .heart::before, .heart::after {
+            content: '';
             width: 100px;
             height: 100px;
             background-color: red;
+            border-radius: 50%;
+            position: absolute;
         }
         .heart::before {
             top: -50px;
@@ -39,14 +38,19 @@
             left: 50px;
             top: 0;
         }
-        @keyframes heartbeat {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+        @keyframes beat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
         }
     </style>
 </head>
 <body>
     <div class="heart"></div>
-    <img src="https://media.giphy.com/media/l1J9qgEZWGM0K9AR6/giphy.gif" alt="Romantic GIF" style="position: absolute; bottom: 20px; width: 400px;">
+    <h1>Happy Valentine's Day!</h1>
+    <img src="https://media.giphy.com/media/25w1G9tVn5E8g/giphy.gif" alt="Romantic GIF" />
 </body>
 </html>
